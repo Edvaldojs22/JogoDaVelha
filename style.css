@@ -1,0 +1,48 @@
+body{
+  text-align: center;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.containerBuuton{
+margin: 20px 0;
+}
+
+.containerBuuton button{
+  margin: 10px;
+}
+
+#container {
+    width: 300px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+ .box {
+  height: 100px;
+  border: solid 5px black;
+  box-sizing: border-box;
+  flex: 1 1 33%;
+  font-size:80px;
+  color: red;
+  }
+
+#box1,#box2,#box3{
+ border-top: none;
+}
+#box3,#box6,#box9{
+border-right: none;
+}
+#box1,#box4,#box7{
+border-left: none;
+}
+#box7,#box8,#box9{
+border-bottom: none;
+}
