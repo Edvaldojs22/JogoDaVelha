@@ -40,18 +40,18 @@ h1 {
   position: relative;
 }
 
-.containerOptions{
+.containerOptions {
   margin-top: 80px;
 }
 
-.options{
+.options {
   display: flex;
   justify-content: center;
   gap: 40px;
   font-size: 40px;
 }
 
-.options p{
+.options p {
   cursor: pointer;
 }
 
@@ -64,7 +64,7 @@ h1 {
 }
 
 
-.hider{
+.hider {
   display: none;
 }
 
@@ -79,6 +79,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #box1,
@@ -132,7 +133,7 @@ h1 {
 }
 
 
-#clearboard{
+#clearboard {
   display: none;
   position: absolute;
   bottom: 0;
@@ -140,5 +141,28 @@ h1 {
   transform: translate(-50%);
   width: 40px;
   cursor: pointer;
-  
+}
+
+.player {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 52%;
+  transform: translate(-50%);
+}
+
+#reload {
+  position: absolute;
+  font-size: 10px;
+  bottom: 4px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#reload img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
 }

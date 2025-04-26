@@ -18,7 +18,7 @@
                 ser
                 aluno por alguns minutos. </p>
         </div>
-
+             <p class="player"></p>
         <div id="container">
             <div class="box" id="box1"></div>
             <div class="box" id="box2"></div>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="containerOptions">
-            <p>Escolha seu X ou O para começar</p>
+            <p>Escolha X ou O para começar</p>
             <div class="options">
                 <p id="optionX">X</p>
                 <p id="optionO">O</p>
@@ -42,12 +42,18 @@
         <div class="containerScoreboard hider">
             <p>Potunuação</p>
             <div class="scoreboard">
-                <div>Jogador <br>X</div>
-                <div>Jogador <br>O</div>
+                <div>Jogador <br><span id="x"></span></div>
+                <div>Jogador <br><span id="o"></span></div>
             </div>
         </div>
 
         <img id="clearboard" src="img/blackboard-eraser.png" alt="">
+
+        <div id="reload">
+            <p>Recomeçar</p>
+            <img  src="img/reload.png" alt="">
+        </div>
+        
 
     </main>
 
