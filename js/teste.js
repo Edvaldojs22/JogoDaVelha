@@ -1,4 +1,27 @@
 const boxs = document.querySelectorAll('.box')
+const optios = document.querySelectorAll('.options p')
+
+const clearFrame = document.querySelector('#clearboard')
+const gaming = document.querySelector('#container')
+const containerOptions = document.querySelector('.containerOptions')
+
+let controlPlayer = ''
+
+optios.forEach((tag) => {
+    tag.addEventListener('click', (event) => {
+        if (event.target.id == "optionX") {
+            controlPlayer = "JogadorX"
+            console.log(controlPlayer)
+        } else {
+            controlPlayer = "JogadorO"
+            console.log(controlPlayer)
+        }
+        containerOptions.style.display = 'none'
+        gaming.style.display = 'flex'
+    })
+})
+
+
 let possibilities = [
     ['box1', 'box2', 'box3'],
     ['box4', 'box5', 'box6'],
@@ -21,7 +44,6 @@ const check = (player) => {
         }
     })
 }
-let controlPlayer = 'PlayerX'
 
 boxs.forEach((box) => {
     box.addEventListener('click', (event) => {
@@ -31,15 +53,15 @@ boxs.forEach((box) => {
             check(playerX);
             console.log(playerX);
             controlPlayer = 'PlayerO';
-            console.log(event.target)
         } else {
             event.target.textContent = 'O'
             playerO.push(event.target.id);
             check(playerO);
-            console.log(playerO);
             controlPlayer = 'PlayerX';
         }
+        clearFrame.style.display = 'flex'
     });
+    
 });
 
 

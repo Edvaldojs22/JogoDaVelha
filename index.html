@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <h1>Jogo da velha</h1>
-    <div class="containerBuuton">
-        <button id="start">Start</button>
-        <button id="reload">Reiniciar</button>
-    </div>
-    <div id="container" class="hider">
-        <div class="box" id="box1"></div>
-        <div class="box" id="box2"></div>
-        <div class="box" id="box3"></div>
-        <div class="box" id="box4"></div>
-        <div class="box" id="box5"></div>
-        <div class="box" id="box6"></div>
-        <div class="box" id="box7"></div>
-        <div class="box" id="box8"></div>
-        <div class="box" id="box9"></div>
-    </div>
-    <div class="hider">
-        <p>Potunuação</p>
-        <div>
-            <span>Jogador x <span id="x-score">:</span></span>
-            <span>Jogador o <span id="o-score">:</span> </span>
+    <main id="frame">
+        <div class="containerText">
+            <p>Quem aí lembra dos velhos tempos de escola? Daquela diversão no intervalo, risadas ao redor do quadro e a
+                clássica disputa de Jogo da Velha? Que tal reviver essas memórias com uma partida no nosso Jogo da
+                Velha, agora no tema escola? Prepare-se para dar aquele 'X' ou 'O' com muito estilo, enquanto volta a
+                ser
+                aluno por alguns minutos. </p>
         </div>
-    </div>
+
+        <div id="container">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+            <div class="box" id="box9"></div>
+        </div>
+
+        <div class="containerOptions">
+            <p>Escolha seu X ou O para começar</p>
+            <div class="options">
+                <p id="optionX">X</p>
+                <p id="optionO">O</p>
+            </div>
+        </div>
+
+        <div class="containerScoreboard hider">
+            <p>Potunuação</p>
+            <div class="scoreboard">
+                <div>Jogador <br>X</div>
+                <div>Jogador <br>O</div>
+            </div>
+        </div>
+
+        <img id="clearboard" src="img/blackboard-eraser.png" alt="">
+
+    </main>
+
     <script src="js/teste.js"></script>
 </body>
+
 </html>
