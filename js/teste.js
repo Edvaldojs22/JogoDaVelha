@@ -50,15 +50,15 @@ let playerO = []
 const check = (player) => {
     possibilities.some((possibility) => {
         if (possibility.every(box => player.includes(box))) {
-            
+
             clearGaming()
             if (controlPlayer == 'PlayerX') {
-                 playerWin.style.display = 'flex'
+                playerWin.style.display = 'block'
                 playerWin.textContent = 'Jogador X foi o vencedor!'
-                console.log(player.textContent)
                 scoreX.textContent = scoreValueX++
+                
             } else {
-                 playerWin.style.display = 'flex'
+                playerWin.style.display = 'flex'
                 playerWin.textContent = 'Jogador O foi o vencedor!'
                 scoreO.textContent = scoreValueO++
 
@@ -94,7 +94,7 @@ const clearGaming = () => {
     playerX.splice(0, playerX.length)
     playerO.splice(0, playerO.length)
     setTimeout(() => {
-         playerWin.style.display = 'none'
+        playerWin.style.display = 'none'
         boxs.forEach((tag) => {
             tag.textContent = ''
         })
@@ -118,6 +118,7 @@ const reload = document.querySelector('#reload').addEventListener('click', () =>
     player.style.display = 'none'
     gaming.style.display = 'none'
     containerOptions.style.display = 'block'
+    clearFrame.style.display = 'none'
     boxs.forEach((tag) => {
         tag.textContent = ''
     })
