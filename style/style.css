@@ -151,6 +151,21 @@ h1 {
   transform: translate(-50%);
 }
 
+.playerWin{
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 52%;
+  transform: translate(-50%);
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  margin: 0;
+  padding: 5px;
+  font-weight: 700;
+}
+
+
 #reload {
   position: absolute;
   font-size: 10px;
