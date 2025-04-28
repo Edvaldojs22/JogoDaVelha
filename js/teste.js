@@ -1,7 +1,15 @@
 const boxs = document.querySelectorAll('.box')
 const optios = document.querySelectorAll('.options p')
+
 const scoreX = document.querySelector('#x')
 const scoreO = document.querySelector('#o')
+const player = document.querySelector('.player')
+const playerWin = document.querySelector('.playerWin')
+
+const clearFrame = document.querySelector('#clearboard')
+const gaming = document.querySelector('#container')
+const containerOptions = document.querySelector('.containerOptions')
+
 
 const possibilities = [
     ['box1', 'box2', 'box3'],
@@ -13,19 +21,13 @@ const possibilities = [
     ['box1', 'box5', 'box9'],
     ['box3', 'box5', 'box7']
 ]
-
-
-const player = document.querySelector('.player')
-const playerWin = document.querySelector('.playerWin')
-
-
-const clearFrame = document.querySelector('#clearboard')
-const gaming = document.querySelector('#container')
-const containerOptions = document.querySelector('.containerOptions')
-
 let controlPlayer = ''
 let scoreValueX = 1
 let scoreValueO = 1
+
+
+
+
 
 optios.forEach((tag) => {
     tag.addEventListener('click', (event) => {
@@ -40,33 +42,40 @@ optios.forEach((tag) => {
         }
         containerOptions.style.display = 'none'
         gaming.style.display = 'flex'
-
     })
 })
 
-let playerX = []
-let playerO = []
 
 const check = (player) => {
+    
     possibilities.some((possibility) => {
-        if (possibility.every(box => player.includes(box))) {
-
-            clearGaming()
-            if (controlPlayer == 'PlayerX') {
-                playerWin.style.display = 'block'
-                playerWin.textContent = 'Jogador X foi o vencedor!'
-                scoreX.textContent = scoreValueX++
-                
-            } else {
-                playerWin.style.display = 'flex'
-                playerWin.textContent = 'Jogador O foi o vencedor!'
-                scoreO.textContent = scoreValueO++
-
+        if (playerO.length + playerX.length < 9) {
+            if (possibility.every(box => player.includes(box))) {
+                clearGaming()
+                if (controlPlayer == 'PlayerX') {
+                    playerWin.style.display = 'block'
+                    playerWin.textContent = 'Jogador X foi o vencedor!'
+                    scoreX.textContent = scoreValueX++
+                } else {
+                    playerWin.style.display = 'flex'
+                    playerWin.textContent = 'Jogador O foi o vencedor!'
+                    scoreO.textContent = scoreValueO++
+                }
             }
+        } else {
+            console.log('Deu velha')
+            playerWin.style.display = 'block'
+            playerWin.textContent = 'Deu velha'
+            clearGaming()
         }
+
     })
+
 }
 
+
+let playerX = []
+let playerO = []
 boxs.forEach((box) => {
     box.addEventListener('click', (event) => {
         if (controlPlayer == 'PlayerX') {
@@ -75,20 +84,25 @@ boxs.forEach((box) => {
             player.textContent = "Vez do O"
             check(playerX);
             controlPlayer = 'PlayerO';
-
         } else {
             event.target.textContent = 'O'
             playerO.push(event.target.id);
             player.textContent = "Vez do X"
             check(playerO);
             controlPlayer = 'PlayerX';
-
         }
         clearFrame.style.display = 'flex'
-
     });
-
 });
+
+
+clearFrame.addEventListener('click', () => {
+    playerX.splice(0, playerX.length)
+    playerO.splice(0, playerO.length)
+    boxs.forEach((tag) => {
+        tag.textContent = ''
+    })
+})
 
 const clearGaming = () => {
     playerX.splice(0, playerX.length)
@@ -100,15 +114,6 @@ const clearGaming = () => {
         })
     }, 2000)
 }
-
-
-clearFrame.addEventListener('click', () => {
-    playerX.splice(0, playerX.length)
-    playerO.splice(0, playerO.length)
-    boxs.forEach((tag) => {
-        tag.textContent = ''
-    })
-})
 
 const reload = document.querySelector('#reload').addEventListener('click', () => {
     playerX.splice(0, playerX.length)

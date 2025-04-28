@@ -163,14 +163,14 @@ font-weight: 1000;
 .playerWin {
   display: none;
   position: absolute;
-  top: 10px;
-  left: 52%;
+  top: 15px;
+  left: 51%;
   transform: translate(-50%);
   background-color: white;
   border-radius: 4px;
   color: black;
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   font-weight: 700;
 }
 
@@ -220,10 +220,11 @@ font-weight: 1000;
   }
 
   .playerWin{
-    top: 50%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    padding: 20px;
   }
 
   .player{
