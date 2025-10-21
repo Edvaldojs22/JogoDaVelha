@@ -2,7 +2,8 @@
 Quem aí lembra dos velhos tempos de escola? Daquela diversão no intervalo, risadas ao redor do quadro e a clássica disputa de Jogo da Velha? Que tal reviver essas memórias com uma partida no nosso Jogo da Velha, agora no tema escola? Prepare-se para dar aquele 'X' ou 'O' com muito estilo, enquanto volta a ser aluno por alguns minutos.
 
 🌐 Acesse o Projeto Online
-🔗 Clique aqui para jogar
+🔗 Clique aqui para jogar 
+https://edvaldojs22.github.io/JogoDaVelha/
 
 ## 🖼️ Visual do Projeto
 
