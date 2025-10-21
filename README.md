@@ -4,17 +4,12 @@ Quem aí lembra dos velhos tempos de escola? Daquela diversão no intervalo, ris
 🌐 Acesse o Projeto Online
 🔗 Clique aqui para jogar
 
-📸 Imagem do Projeto
-Uma prévia visual do jogo com tema escolar:
+## 🖼️ Visual do Projeto
 
-markdown
-![Jogo da Velha - Tema Escolar](<img width="1379" height="628" alt="image" src="https://github.com/user-attachments/assets/584c24ca-9615-4138-8cc6-c9608007b2a2" />
-)
-🖼️ Print do Site
-Veja como o jogo aparece no navegador:
+| Versão Desktop                                                  | Versão Mobile                                                  |
+| --------------------------------------------------------------- | -------------------------------------------------------------- |
+| ![Desktop](./img/Captura%20de%20tela%202025-10-21%20164446.png) | ![Mobile](./img/Captura%20de%20tela%202025-10-21%20165203.png) |
 
-markdown
-![Print do Site](https://edvaldojs22.github.io/JogoDaVelha/)
 📌 Descrição
 Este projeto é uma recriação do clássico Jogo da Velha (Tic-Tac-Toe), desenvolvido com HTML, CSS e JavaScript puro. A interface foi inspirada na infância, com elementos que remetem ao quadro de giz e ao ambiente escolar, trazendo uma experiência nostálgica e divertida.
 
@@ -27,7 +22,6 @@ JavaScript (sem bibliotecas ou frameworks)
 
 ⚙️ Funcionalidades
 ✅ Jogabilidade para dois jogadores (X e O)
-
 
 🔄 Botão para reiniciar a partida
 
@@ -43,7 +37,7 @@ git clone https://github.com/Edvaldojs22/JogoDaVelha.git
 Navegue até a pasta do projeto:
 
 bash
-cd nome-do-repositorio
+cd JogoDaVelha
 Abra o arquivo index.html no seu navegador preferido.
 
 🧠 Autor
